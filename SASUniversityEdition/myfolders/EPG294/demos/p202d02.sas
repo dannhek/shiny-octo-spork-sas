@@ -1,0 +1,30 @@
+***********************************************************;
+*  Identifying the First and Last Row in Each Group       *;
+***********************************************************;
+*  Syntax                                                 *;
+*                                                         *;
+*    PROC SORT DATA=input-table                           *;
+*        <OUT=output-table>;                              *;
+*        BY <DESCENDING> col-name (s);                    *;
+*    RUN;                                                 *;
+*    DATA output-table;                                   *;
+*        SET input-table;                                 *;
+*        BY <DESCENDING> col-name (s);                    *;
+*    RUN;                                                 *;
+*    FIRST.bycol                                          *;
+*    LAST.bycol                                           *;
+***********************************************************;
+*  Demo                                                   *;
+*     Refer to the course notes for detailed steps.       *;
+***********************************************************;
+
+proc sort data=pg2.storm_2017 out=storm2017_sort(keep=Basin Name);
+	by Basin;
+run;
+
+data storm2017_max;
+	set storm2017_sort;
+	by Basin;
+	*First_Basin=first.basin;
+	*Last_Basin=last.basin;
+run;

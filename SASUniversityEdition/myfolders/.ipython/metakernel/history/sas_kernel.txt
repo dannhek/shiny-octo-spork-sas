@@ -1,0 +1,75 @@
+proc http
+    url = https://content.sph.harvard.edu/fitzmaur/ala2e/cholesterol.sas7bdat
+    out = BMI651/HW2/cholesterol.sas7bdat
+;
+proc http
+    url = https://content.sph.harvard.edu/fitzmaur/ala2e/cholesterol.sas7bdat
+    method = 'get'
+    out = BMI651/HW2/cholesterol.sas7bdat
+;
+proc http
+    url = https://content.sph.harvard.edu/fitzmaur/ala2e/cholesterol.sas7bdat
+    method = 'get'
+    out = BMI651/HW2/cholesterol.sas7bdat
+;
+filename out "/Users/dhek/Desktop/SAS/SASUniversityEdition/myfolders/BMI651/HW2";
+proc http
+    url = https://content.sph.harvard.edu/fitzmaur/ala2e/cholesterol.sas7bdat
+    method = 'get'
+    out = f
+;
+filename f "/Users/dhek/Desktop/SAS/SASUniversityEdition/myfolders/BMI651/HW2";
+proc http
+    url = https://content.sph.harvard.edu/fitzmaur/ala2e/cholesterol.sas7bdat
+    method = 'get'
+    out = f
+;
+filename f "/Users/dhek/Desktop/SAS/SASUniversityEdition/myfolders/BMI651/HW2";
+proc http
+    url = "https://content.sph.harvard.edu/fitzmaur/ala2e/cholesterol.sas7bdat"
+    method = 'get'
+    out = f
+;
+filename f "/Users/dhek/Desktop/SAS/SASUniversityEdition/myfolders/BMI651/HW2";
+proc http
+    url = "https://content.sph.harvard.edu/fitzmaur/ala2e/cholesterol.sas7bdat"
+    method = 'get'
+    out = data
+    headerout = hdrout2
+;
+filename f="/Users/dhek/Desktop/SAS/SASUniversityEdition/myfolders/BMI651/HW2";
+proc http
+    url = "https://content.sph.harvard.edu/fitzmaur/ala2e/cholesterol.sas7bdat"
+    method = 'get'
+    out = data
+    headerout = hdrout2
+;
+filename f="/Users/dhek/Desktop/SAS/SASUniversityEdition/myfolders/BMI651/HW2";
+proc http
+    url = "https://content.sph.harvard.edu/fitzmaur/ala2e/cholesterol.sas7bdat"
+    method = 'get'
+    out = data
+    headerout = hdrout2;
+run;
+filename out "c:\temp\aapl.csv";
+ 
+proc http
+ url='https://query1.finance.yahoo.com/v7/finance/download/AAPL?period1=1535399845&period2=1538078245&interval=1d&events=history&crumb=hKubrf50i1P'
+ method="get" out=out;
+run;
+filename f="/Users/dhek/Desktop/SAS/SASUniversityEdition/myfolders/BMI651/HW2/cholesterol.sas7bdat";
+proc http
+    url = "https://content.sph.harvard.edu/fitzmaur/ala2e/cholesterol.sas7bdat"
+    method = 'get'
+    out = data
+    headerout = hdrout2;
+run;
+filename out "/Users/dhek/Desktop/SAS/SASUniversityEdition/myfolders/BMI651/HW2/aapl.csv";
+ 
+proc http
+ url='https://query1.finance.yahoo.com/v7/finance/download/AAPL?period1=1535399845&period2=1538078245&interval=1d&events=history&crumb=hKubrf50i1P'
+ method="get" out=out;
+run;
+data hw2df_wide;
+    set cholesterol;
+run;

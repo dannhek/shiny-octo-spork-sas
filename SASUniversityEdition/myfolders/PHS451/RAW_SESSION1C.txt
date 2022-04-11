@@ -1,0 +1,6 @@
+01 case 01/16/1995 28 exposed
+02 control 01/25/1992 29 exposed
+03 case 10/14/1996 32 unexposed
+04 control 08/25/1992 26 exposed
+05 control 03/18/1997 25 unexposed
+06 case 06/24/1993 30 exposed
